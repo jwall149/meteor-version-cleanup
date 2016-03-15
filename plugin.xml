@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="me.tonny.cordova.meteorcleanup" version="0.1.0">
+  <name>Meteor cleanup version</name>
+  <description>Clean up meteor/version when new client is update, and cleanup only once</description>
+
+  <license>MIT</license>
+
+  <engines>
+    <!-- Requires > 3.3.* because of the custom Framework tag for iOS [CB-5238] -->
+    <!-- Requires > 3.5.0 because of the custom Framework tag for Android [CB-6698] -->
+    <engine name="cordova" version=">=3.5.0" />
+  </engines>
+
+<!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="MeteorCleanupPlugin">
+        <param name="android-package" value="me.tonny.cordova.meteorcleanup.MeteorCleanupPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/MeteorCleanupPlugin.java" target-dir="src/me/tonny/cordova/meteorcleanup" />
+
+</platform>
+
+<!-- ios -->
+<platform name="ios">
+    <config-file target="config.xml" parent="/*">
+        <feature name="MeteorCleanupPlugin">
+            <param name="ios-package" value="MeteorCleanupPlugin" />
+            <param name="onload" value="true" />
+        </feature>
+    </config-file>
+    <header-file src="src/ios/MeteorCleanupPlugin.h" target-dir="mcp"/>
+    <source-file src="src/ios/MeteorCleanupPlugin.m" target-dir="mcp"/>
+</platform>
+
+</plugin>
