@@ -1,0 +1,35 @@
+{
+  "name": "meteor-cleanup-version",
+  "version": "0.1.0",
+  "description": "Clean up meteor/version when new client is update, and cleanup only once",
+  "cordova": {
+    "id": "me.tonny.cordova.meteorcleanup",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwall149/meteor-version-cleanup.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "meteor",
+    "autoupdate"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.5.0"
+    }
+  ],
+  "author": "Tonny Pham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwall149/meteor-version-cleanup/issues"
+  },
+  "homepage": "https://github.com/jwall149/meteor-version-cleanup#readme"
+}
