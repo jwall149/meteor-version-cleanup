@@ -2,7 +2,7 @@
 
 @implementation MeteorCleanupPlugin
 
-- (CDVPlugin *)initWithWebView:(UIWebView *)theWebView {
+- (void)pluginInitialize {
     NSLog(@"Checking cordova version");
     NSString* version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSString* key = [NSString stringWithFormat:@"esportsplus_mcp_version_mark_%@", version];
